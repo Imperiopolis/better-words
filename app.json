@@ -3,14 +3,14 @@
   "description": "Learn more about your words and their social impact, build new habits around your language",
   "repository": "https://github.com/Imperiopolis/better-words",
   "env": {
-    "SLACK_VERIFICATION_TOKEN=": {
+    "SLACK_VERIFICATION_TOKEN": {
       "description": "TODO explain how to get this",
       "required": true
     },
-    "SLACK_BOT_TOKEN=": {
+    "SLACK_BOT_TOKEN": {
       "description": "Slack bot token TODO explain how to get this",
       "required": true
-    },
+    }
   },
-  "image": "https://www.python.org/static/opengraph-icon-200x200.png" // temp, until we have an image
+  "image": "https://www.python.org/static/opengraph-icon-200x200.png"
 }
