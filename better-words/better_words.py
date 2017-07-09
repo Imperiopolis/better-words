@@ -2,5 +2,10 @@ from event_monitor import EventMonitor
 from os import environ
 
 # Start the event monitor
-print environ['PORT']
-EventMonitor().start(environ['PORT'] or 3000)
+if 'PORT' in environ:
+	port = environ['PORT']
+else:
+	port = 3000
+print port
+
+EventMonitor().start(port=port)

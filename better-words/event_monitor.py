@@ -1,5 +1,5 @@
 from os import environ
-from slackeventsapi import SlackEventAdapter
+from slack_emitter import SlackEventAdapter
 from slackclient import SlackClient
 from message_parser import MessageParser
 
@@ -8,7 +8,7 @@ class EventMonitor(object):
     def __init__(self):
         self.slack_client = SlackClient(environ['SLACK_BOT_TOKEN'])
         self.message_parser = MessageParser()
-        self.slack_events_adapter = SlackEventAdapter(environ['SLACK_VERIFICATION_TOKEN'], '/slack/events')
+        self.slack_events_adapter = SlackEventAdapter(environ['SLACK_VERIFICATION_TOKEN'])
 
         # register for the events we care about
         @self.slack_events_adapter.on('message')
@@ -34,4 +34,4 @@ class EventMonitor(object):
         @param port: The port to run the server on
         @param debug: if True, debug mode will be enabled
         """
-        self.slack_events_adapter.start(host='0.0.0.0', port=port, debug=debug)
+        self.slack_events_adapter.start(port=port, debug=debug)
