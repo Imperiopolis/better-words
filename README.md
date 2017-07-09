@@ -16,3 +16,6 @@ brew install heroku-toolbelt
 `heroku git:remote -a better-words-test -r production`
 
 `git push production` when you make changes
+
+
+TODO: add a port variables file
