@@ -34,4 +34,4 @@ class EventMonitor(object):
         @param port: The port to run the server on
         @param debug: if True, debug mode will be enabled
         """
-        self.slack_events_adapter.start(port=port, debug=debug)
+        self.slack_events_adapter.start(host='0.0.0.0', port=port, debug=debug)
