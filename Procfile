@@ -1,1 +1,1 @@
-bot: python ./better-words/better_words.py
+web: python ./better-words/better_words.py
